@@ -52,22 +52,96 @@ body{
 header{
     height: auto;
     width: 100%;
-    position: absolute;
-    top: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
+    position: absolute;
+    top: 0;
     z-index: 1;
     padding: 50px 30px 0px 30px;
 } 
 
 
+   /* Estilos para el menú hamburguesa */
+   
 
-.banner{
-    height: auto;
-    width: 100%;
-    padding: 140px 0px 120px 0px;
+/* Acá la barra del nav o div */
+
+
+.menuResponsive {
+  display: none;
+  width: 10%;
+  margin: auto;   
+  color: white;
+  position: relative;
+  min-height: 48px;
 }
+
+/* Acá edito la lista escondida */
+
+
+.menuResponsive a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  max-width: 800px;
+  height: 60px;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+/* Acá edité los tamaños de la img como iconos */
+.menuResponsive img, .logo img, .buscar img{
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+}
+
+/* Acá edito el input de checkbox y los iconos, la posición y tamaño */
+.menuResponsive input[type="checkbox"],
+.menuResponsive .menu, .menuResponsive .aspa   {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px; 
+}
+
+/* Acá El tamaño del icono de vuelta. */
+.menuResponsive .menu, .menuResponsive .aspa {
+  pointer-events: none;
+}
+
+/* Acá el checkbox lo hacemos invisible */
+.menuResponsive input[type="checkbox"] {
+  opacity: 0;
+}
+
+
+/* Acá edité que el nav no se vea. */
+.menuResponsive nav  {
+  display: none;
+}
+
+/* Acá indico que si el input es presionado, se abre el nav y lo convierte en display block */
+.menuResponsive input:checked ~ nav {
+  display: block;
+}
+
+/* Acá indico que si presiono el input de vuelta, se cierra el nav. */
+.menuResponsive input:checked ~ .menu {
+  display: none;
+}
+
+/* Acá indico que si el input no está presionado, el icono de ASPA - Cerrar, desaparece */
+.menuResponsive input:not(:checked) ~ .aspa {
+  display: none;
+}
+
+
 .navBar{
     display: flex;
     justify-content: space-around;
@@ -88,6 +162,12 @@ header{
 .navBar img{
     height: 50px;
     width: auto;
+} 
+
+.banner{
+    height: auto;
+    width: 100%;
+    padding: 140px 0px 120px 0px;
 }
 
 .barra{
@@ -119,9 +199,12 @@ header{
     align-items: center;
     font-family: montserrat;
     color: gray;   
-    font-size: 12px;
     margin-top: 170px;
     padding-bottom: .125rem;
+}
+
+.detalleBanner h2{
+    font-size: 20px;
 }
 
 .detalleBanner div{
@@ -247,19 +330,6 @@ background-repeat: no-repeat;
 background-size: cover;
 position: relative;
 }
-/* 
-.serviciosDeAgencia::after{
-    content: '';
-    display: block;
-    height: 6.25rem;
-    width: 31.25rem;
-    position: absolute;
-    top: 31.25rem;
-    right: 0;
-    background-image: url(../assets/img/misce-sol.png);
-    background-repeat: no-repeat;
-}
- */
 
 .serviciosDeAgencia h2{
   font-family: milker;
@@ -297,23 +367,27 @@ position: relative;
 .uno{
     background-image: url(../assets/img/fotografias.jpg);
     align-content: center;
+    background-size: cover;
 }
 .dos{
     background-image: url(../assets/img/TresD.png);
     align-content: center;
+    background-size: cover;
 }
 .tres{
     background-image: url(../assets/img/branding.png);
     align-content: center;
+    background-size: cover;
 }
 .cuatro{
     background-image: url(../assets/img/audiovisual.png);
     align-content: center;
+    background-size: cover;
 }
 
 .cajaNegra{
-    height: 280px;
-    width: 280px;
+    height: 80%;
+    width: 80%;
     background-color: rgba(0, 0, 0, 0.678);    
     margin: auto;   
     align-content: center;
@@ -341,17 +415,19 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;    
-    gap: 20px;
+    gap: 40px;
     color: #66C5E1;
     margin: 0px 0px 10px 0px;
-    padding: 40px 0px 40px 0px;
+    padding: 40px 5px 40px 5px;
 
 }
 .informacionFooter{
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;    
-    padding: 40px 0px 20px 0px;
+    padding: 40px 5px 20px 5px;    
+    gap: 40px;
 }
 
 .informacionFooter h3{
@@ -469,7 +545,7 @@ padding-top: 1.25rem;
 
 .seccionesTrabajos{
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     padding: 30px 0px 30px 0px;
@@ -547,7 +623,7 @@ padding-top: 1.25rem;
 
 .fondoServicios h2{
     font-size: 10vw;
-    padding-top: 42vh;
+    padding-top: 47vh;
     color: white;
     font-family: milker;
     text-align: center;
@@ -557,13 +633,13 @@ padding-top: 1.25rem;
 .cajasServicios{
     height: auto;
     width: 100%;
-    padding: 120px 32px 152px 32px;    
+    padding: 120px 20px 152px 20px;    
     font-family: milker;    
     font-size: 25px;
     font-weight: lighter;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -579,26 +655,28 @@ padding-top: 1.25rem;
 
 .brandingServicio h2{
     font-size: 60px;
-    text-align: center;
+    text-align: center;    
+    color: #E7328A;
+    text-shadow: 5px 5px 0px #ffffff;
 }.brandingServicio span{
     font-size: 128px;
     line-height: 100px;
 }
-.brandingServicio p{
+.brandingServicio div p{    
+    font-size: 28px;
     font-family: montserrat;
-    font-size: 32px;    
-    padding-top: 20px;
+    margin-top: 20px;
+    color: #E7328A;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.578);
 }
-
-
-
 .listaDetalle ul{
     width: 40vw;
     font-size: 40px;
     padding: 0rem 3.75rem 0rem 3.75rem;
 }
-
-
+.listaDetalle ul li{
+    margin-top: 20px;
+}
 
 .videosAnimados{
     height: auto;
@@ -618,24 +696,31 @@ padding-top: 1.25rem;
     width: 450px;
 }
 .videosAnimados h2{
-    font-size: 96px;
+    font-size: 100px;
     text-align: center;
     line-height: 90px;
-}.videosAnimados h2 span{
-    color: #E7328A;
+    color: #fefefe;    
+    text-shadow: 5px 5px 0px #E7328A;
+}.videosAnimados h2 span{   
+    font-size: 70px;
+    line-height: 50px;
 }
 .videosAnimados p{
+    font-size: 28px;
     font-family: montserrat;
-    text-align: left;
-    font-size: 32px;    
+    text-align: right;
     padding-top: 20px;
+    margin: 0px 20px 0px 20px;
+}
+.videosAnimados .listaDetalle ul{
+    width: 350px;
 }
 
 
 .creamosWeb{
     height: auto;
     width: 100%;
-    padding: 320px 0px 320px 0px;
+    padding: 200px 20px 200px 20px;
     background-image: url(../assets/img/fondoBlanco.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -643,72 +728,124 @@ padding-top: 1.25rem;
     position: relative;    
     z-index: 0;
 }
-.creamosWeb::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 450px;
-    width: 450px;
-    background-image: url(../assets/img/misceCubo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-}
-
 .creamosWeb h2{
-    font-size: 120px;
-    line-height: 120px;
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #E7328A;
+    text-shadow: 5px 5px 0px #ffffff;
 }.creamosWeb h2 span{
-    font-size: 167px;
+    font-size: 145px;
+
 }
-.creamosWeb p{
-    width: 45vw;
+.creamosWeb div p{
+    width: 42vw;
+    font-size: 28px;
     font-family: montserrat;
-    text-align: left;
-    font-size: 32px;    
+    margin-top: 20px;
+    color: #E7328A;
+    text-align: left;  
     padding-top: 20px;
+    margin-left: 20px;    
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.578);
 }
-
-.creamosWeb ul{
-    line-height: 120px;
-    padding-left: 100px;
+.creamosWeb .listaDetalle{
+    width: 35vw;
 }
-
 
 .formSection{
     height: auto;
+    padding: 40px 10px 90px 10px;
     width: 100%;
-    padding: 40px 0px 60px 0px;
     color: white;
     font-family: milker;
     font-weight: lighter;
-    font-size: 40px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    background-image: url(../assets/img/contacto/fondoBLack-blueDos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+ .formSection::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0px 0px 60px 60px;
+    background-image: url(../assets/img/misce-flecha.png);
+    height: 250px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}.formSection::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 60px 60px 0px 0px;
+    background-image: url(../assets/img/misce-flecha.png);
+    height: 250px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+
+.cajaFormulario{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    position: relative;
+}
+::placeholder{
+    font-family: montserrat;
+}
+.formulario{
+    height: 100%;
+    width: 100%;
+}
+.nombre{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.contactoForm{    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contactoForm input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.mensajeEstilo{
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.botonEnviar{
+    padding: 15px;
+    width: 150px;
+    font-family: montserrat;
+    position: absolute;
+    left: 0;
 }
 
-.comienza{
-    width: 60%;
-}
-.formSection h3{
+.comienza h3{
     font-size: 70px;
 }
-.formSection p{
+.comienza p{
  font-family: montserrat;
  font-size: 30px;
 }
-.formulario{
- height: 450px;
- width: 550px;
- background-color: white;
- margin: auto;
- margin-top: 20px;
- margin-bottom: 40px;
-}
+
 
 
 
@@ -903,53 +1040,6 @@ z-index: -1;
     font-size: 70px;
 }
 
-.formSection{
-    display: flex;
-    flex-direction: column;
-    font-family: montserrat;
-    font-size: 15px;
-    font-weight: lighter;
-    background-image: url(../assets/img/contacto/fondoBLack-blueDos.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-}
-.formSection::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0px 0px 60px 60px;
-    background-image: url(../assets/img/misce-flecha.png);
-    height: 250px;
-    width: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.formSection::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 60px 60px 0px 0px;
-    background-image: url(../assets/img/misce-flecha.png);
-    height: 250px;
-    width: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-
-.formulario{
- height: 55vh;
- width: 60vw;
- margin-top: 50px;
- position: relative;
-}
-
-
-
 
 
 /* ---------------- FOOTER ------------ */
@@ -1014,13 +1104,13 @@ footer p:last-child{
     /* INDEX */
 
   header{
-    padding-top: 40px;
+    padding-top: 60px;
   }  .navBar{
     gap: 40px;
   }  .nombreBanner img{
     margin-top: 190px;
   }  .detalleBanner{
-    margin-top: 80px;
+    margin-top: 150px;
   }  .flexAgencia p{
     width: 80%;
     margin: auto;
@@ -1031,7 +1121,213 @@ footer p:last-child{
 }
   
 
+/* SERVICIOS */
 
+.fondoServicios h2{
+    font-size: 12vw;
+    padding-top: 48vh;
+}
+.brandingServicio{
+   padding: 0px 0px 140px 0px;
+}
+.brandingServicio h2{
+    text-align: center;
+}.brandingServicio span{
+    line-height: 100px;
+}
+.brandingServicio p{
+    font-family: montserrat;  
+    padding: 20px 0px 60px 0px;
+    text-align: center;
+}
+
+.listaDetalle ul{
+    width: 80%;
+    margin: auto;
+    padding-left: 0px;
+    font-size: 40px;
+    text-align: center;
+    list-style-position: inside;
+}
+.videosAnimados{
+    flex-direction: column-reverse;    
+    justify-content: center;
+}
+.videosAnimados::after{
+    top: 0;
+}
+.videosAnimados h2{
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+}.videosAnimados h2 span{
+    font-size: 80px;
+}
+.videosAnimados p{   
+    padding: 60px 0px 80px 0px;
+    text-align: center;
+}
+
+.creamosWeb{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.creamosWeb h2{
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+}.creamosWeb h2 span{
+    font-size: 145px;
+}
+.creamosWeb div p{
+    width: 60%;
+    margin: auto;
+    padding: 60px 0px 80px 0px;
+    text-align: center;
+}
+.creamosWeb .listaDetalle{
+    width: 100vw;
+    margin: auto;
+}
 
 
 }
+
+
+
+
+
+
+
+@media only screen and (max-width: 976px){
+
+    /* INDEX */
+
+  header{
+    padding-top: 60px;
+  }  
+
+
+  .menuResponsive {
+    display: block;
+  }
+
+  .logo{
+    width: 80%;
+}
+.aspa{
+  width: 10%;  
+  margin: auto; 
+}
+
+
+  nav{
+    display: none;
+  }
+  .navBar{
+    gap: 40px;
+  }  
+  .nombreBanner img{
+    margin-top: 240px;
+  }   
+  .detalleBanner{
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 5px;
+}
+.detalleBanner div{
+    margin-top: 15px;
+    width: 100%;
+}
+.detalleBanner div img{
+    padding: 0;
+    margin: 0px 25px 0px 25px;
+    text-align: center;
+}
+.flexFlecha{
+    justify-content: center;
+    gap: 0;
+}
+.flexFlecha img{    
+   width: 50px;
+}
+.flexFlecha a{
+    font-size: 25px;
+    margin-right: 40px;
+} 
+  .flexSomosUna{
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .flexSomosUna h1{
+    font-size: 40px;
+  }.flexSomosUna h1 span{
+    font-size: 70px;
+  }
+  .flexAgencia p, .flexAgencia span{
+    width: 100%;
+    margin: auto;
+    font-size: 42px;
+    line-height: 50px;
+}.video iframe{
+    height: 500px;
+    width: 80vw;
+}.miscelaneasAgencia{
+    width: 100%;
+    justify-content: center;
+    gap: 60px;
+
+}
+.serviciosDeAgencia p{
+    width: 95%;
+    font-family: montserrat;
+    font-size: 30px;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 0px 10px 0px 10px;
+    text-shadow: 1px 1px 1px #201f1f6e;
+}
+
+
+
+
+/* FOOTER */
+
+.infoFooter{
+    gap: 40px;
+}
+
+.informacionFooter{
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.informacionFooter h3{
+    color: #E7328A;
+    font-family: milker;
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 30px;
+}
+.informacionFooter h3::after{
+  height: 3px;
+  width: 50px;
+  bottom: 20px;
+}
+
+.informacionFooter a{
+ font-size: 15px; 
+}
+.dataFooter{
+    display: flex;
+    flex-direction: column;    
+    text-align: left;
+    color: white;
+}
+
+
+}
+
