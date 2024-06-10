@@ -58,93 +58,23 @@ header{
     position: absolute;
     top: 0;
     z-index: 1;
-    padding: 50px 30px 0px 30px;
+    padding: 60px 30px 0px 30px;
 } 
 
 
    /* Estilos para el menú hamburguesa */
-   
+   .menuDesplegable{
+    display: none;
+   }
 
-/* Acá la barra del nav o div */
-
-
-.menuResponsive {
-  display: none;
-  width: 10%;
-  margin: auto;   
-  color: white;
-  position: relative;
-  min-height: 48px;
-}
-
-/* Acá edito la lista escondida */
-
-
-.menuResponsive a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  padding: 10px 20px;
-  max-width: 800px;
-  height: 60px;
-  text-shadow: 1px 1px rgb(0, 0, 0);
-}
-
-/* Acá edité los tamaños de la img como iconos */
-.menuResponsive img, .logo img, .buscar img{
-    height: 48px;
-    width: 48px;
-    object-fit: contain;
-}
-
-/* Acá edito el input de checkbox y los iconos, la posición y tamaño */
-.menuResponsive input[type="checkbox"],
-.menuResponsive .menu, .menuResponsive .aspa   {
-  position: absolute;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  right: 0;
-  top: 0;
-  width: 48px;
-  height: 48px; 
-}
-
-/* Acá El tamaño del icono de vuelta. */
-.menuResponsive .menu, .menuResponsive .aspa {
-  pointer-events: none;
-}
-
-/* Acá el checkbox lo hacemos invisible */
-.menuResponsive input[type="checkbox"] {
-  opacity: 0;
-}
-
-
-/* Acá edité que el nav no se vea. */
-.menuResponsive nav  {
-  display: none;
-}
-
-/* Acá indico que si el input es presionado, se abre el nav y lo convierte en display block */
-.menuResponsive input:checked ~ nav {
-  display: block;
-}
-
-/* Acá indico que si presiono el input de vuelta, se cierra el nav. */
-.menuResponsive input:checked ~ .menu {
-  display: none;
-}
-
-/* Acá indico que si el input no está presionado, el icono de ASPA - Cerrar, desaparece */
-.menuResponsive input:not(:checked) ~ .aspa {
-  display: none;
-}
-
+   .buscarUno{
+    display: block;
+   }
 
 .navBar{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 80px;
     list-style: none;
 }
@@ -1209,19 +1139,32 @@ footer p:last-child{
     padding-top: 60px;
   }  
 
-
-  .menuResponsive {
-    display: block;
-  }
-
   .logo{
     width: 80%;
 }
-.aspa{
-  width: 10%;  
-  margin: auto; 
-}
+.barraGrande, .logoUno, .buscarUno{
+    display: none;
+  }
 
+  .menuDesplegable {
+    width: 100%;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .navDesplegable{
+    position: absolute;
+    top: 1;
+    right: 0;
+    color: black;
+    background-color: white;
+    padding: 10px 20px 10px 160px;
+    text-align: right;
+    border-radius: 5px;
+  }
 
   nav{
     display: none;
