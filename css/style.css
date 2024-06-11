@@ -58,7 +58,7 @@ header{
     position: absolute;
     top: 0;
     z-index: 1;
-    padding: 60px 30px 0px 30px;
+    padding: 60px 30px 0px 30px;    
 } 
 
 
@@ -79,9 +79,9 @@ header{
     list-style: none;
 }
 .navBar a{
-    font-size: 16px;
+    font-size: 16px;    
     color: white;    
-   font-family: 'Termina Test', sans-serif;
+    font-family: 'Termina Test', sans-serif;
     text-decoration: none;
     transition: 0.2s;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
@@ -413,52 +413,39 @@ footer p:last-child{
 
 /* ---------------- PORTFOLIO ------------ */
 
-.carrusel{
+
+
+.carousel-inner{
+    position: relative;
+}
+
+.imagenesCarrusel img{
     height: 100vh;
-    background-image: url(../assets/img/portfolio/droid-UNO.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
 }
 
-.contenedor{
+.contenedorCajaDetalle{
     height: auto;
-    width: 60%;
-    margin: auto;
+    width: 100%;
     position: absolute;
-    top: 85vh;
-    left: 20%;
-}
-
-.cajaDetalle{
-    height: auto;
-    width: 31.25rem;
-    padding: 15px 0px 15px 0px;
-    background-color: white;
+    top: 88%;
     text-align: center;
-    color: black;  
+}
+.cajaDetalle{
+    width: 30rem;
+    text-align: center;
+    color: white;  
     font-family: milker; 
     font-size: 1.25rem;
     margin: auto;
-    align-items: end;
-}.cajaDetalle h2{
-    font-family: montserrat;
-    font-size: 1.25rem;
+    text-shadow: 2px 2px 5px black;
 }
-
-.items ul{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 10px;
-    
-   }
-   .items ul li a{
-       text-decoration: none;    
-       color: white;
-       text-align: center;    
-       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-       text-shadow: .0625rem .0625rem .125rem black, 0 0 1em black, 0 0 0.2em black;
-   }
+.cajaDetalle h2{
+    font-family: montserrat;
+    line-height: 0px;
+    font-size: 1.25rem;    
+    text-shadow: 2px 2px 5px black;
+}
 
 .trabajos{
 background-color: white;    
@@ -466,18 +453,12 @@ text-align: center;
 color: black;
 padding-top: 1.25rem;
 }
-.trabajos h1{
-    font-family: milker;
-    font-weight: lighter;
-    font-size: 5rem;
-}
-
 
 .seccionesTrabajos{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     padding: 30px 0px 30px 0px;
 }
 .seccionesTrabajos {
@@ -485,40 +466,45 @@ padding-top: 1.25rem;
 }
 .seccionesTrabajos li a{
     font-family: montserrat;
-    font-size: 20px;    
+    font-size: 1.25rem;    
     color: black;    
     text-decoration: none;
     text-align: center;
     transition-timing-function: ease-out;
-    transition: 0.1s;
+    transition: 0.1s;    
 }.seccionesTrabajos li a:active{
     font-weight: bolder;
 }.seccionesTrabajos li a:hover{
     font-weight: bolder;
-    font-size: 22px;
+}
+.linea-vertical{
+    padding-right: 20px;
+    border-right: 1px solid black;
 }
 
-
 .galeria{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+    gap: 0;
+    width: 90%;
     margin: auto;
-    padding: 0px 0px 50px 0px;
-    }
-    
-    .galeria img{
-        height: auto;
-        width: 30%;
-        object-fit: cover;
-        transition-timing-function: ease-in-out;
-        transition: 0.5s;
-    }.galeria img:hover{
-        filter: saturate(1.5);
-        scale: 0.95;
-        object-fit: contain;
-    }
+}
+
+.galeria div{
+    margin: 0px;
+    padding: 0px;
+    gap: 0;
+}
+   
+.galeria img{
+    height: auto;
+    width: 550px;
+    object-fit: cover;
+    transition-timing-function: ease-in-out;
+    transition: 0.5s;
+}.galeria img:hover{
+    filter: saturate(1.5);
+    scale: 0.95;
+    object-fit: contain;
+}
 
 
 
@@ -1153,7 +1139,8 @@ footer p:last-child{
     justify-content: space-between;
     align-content: center;
     padding: 0;
-    margin: 0;
+    margin: 0;    
+    align-items: center;
   }
   .navDesplegable{
     position: absolute;
@@ -1236,23 +1223,49 @@ footer p:last-child{
 
 
 
+/* PORTFOLIO */
+
+
+.contenedorCajaDetalle{
+    top: 85%;    
+}
+.cajaDetalle{
+    width: auto;
+    font-size: 1.1rem;
+}
+.cajaDetalle h2{
+    line-height: 0px;
+    font-size: 0.9rem;    
+}
+
+.seccionesTrabajos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0px 5px 0px;
+}
+
+
 
 /* FOOTER */
 
 .infoFooter{
-    gap: 40px;
+    gap: 20px;
+}
+.infoFooter h5{
+    font-size: 12px;
 }
 
 .informacionFooter{
-    justify-content: space-around;
-    margin-left: 20px;
+    justify-content: left;
+    margin-left: 70px;
 }
 
 .informacionFooter h3{
     color: #E7328A;
     font-family: milker;
     font-size: 30px;
-    position: relative;
     padding-bottom: 30px;
 }
 .informacionFooter h3::after{
