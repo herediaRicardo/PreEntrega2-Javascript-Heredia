@@ -629,7 +629,7 @@ padding-top: 1.25rem;
     margin: 0px 20px 0px 20px;
 }
 .videosAnimados .listaDetalle ul{
-    width: 350px;
+    width: 40vw;
 }
 
 
@@ -671,7 +671,7 @@ padding-top: 1.25rem;
 
 .formSection{
     height: auto;
-    padding: 40px 10px 90px 10px;
+    padding: 120px 10px 90px 10px;
     width: 100%;
     color: white;
     font-family: milker;
@@ -686,7 +686,7 @@ padding-top: 1.25rem;
     background-size: cover;
     position: relative;
 }
- .formSection::before{
+.formSection::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -713,6 +713,7 @@ padding-top: 1.25rem;
 .cajaFormulario{
     height: 500px;
     width: 500px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;   
@@ -810,15 +811,12 @@ padding-top: 1.25rem;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
-
 .cajasIntegrantes{
     height: auto;
     width: 350px;
     text-align: center;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 10px 20px 10px;
 }
-
 .integrantes h4{
     font-size: 30px;
     text-align: right;
@@ -826,20 +824,16 @@ padding-top: 1.25rem;
     border-bottom: 1px solid #E7328A;
     font-weight: lighter;
 }
-
-
 .integrantes p{
     font-size: 15px;
     text-align: left;
     padding: 15px 0px 15px 0px;
     font-weight: lighter;
 }
-
 .integrantesFotos img{
     height: auto;
     width: 100%;
     border-radius: 5px;
-    margin-left: 20px;
     transition-timing-function: ease-in-out;
     transition: 0.5s;
 } 
@@ -1058,13 +1052,16 @@ footer p:last-child{
 }
 
 .listaDetalle ul{
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding-left: 0px;
     font-size: 40px;
     text-align: center;
     list-style-position: inside;
+    line-height: 40px;
 }
+
+
 .videosAnimados{
     flex-direction: column-reverse;    
     justify-content: center;
@@ -1083,6 +1080,11 @@ footer p:last-child{
     padding: 60px 0px 80px 0px;
     text-align: center;
 }
+
+.videosAnimados .listaDetalle ul{
+    width: 100%;
+}
+
 
 .creamosWeb{
     width: 100%;
@@ -1122,7 +1124,7 @@ footer p:last-child{
     /* INDEX */
 
   header{
-    padding-top: 60px;
+    padding-top: 20px;
   }  
 
   .logo{
@@ -1159,14 +1161,27 @@ footer p:last-child{
   .navBar{
     gap: 40px;
   }  
+  
+  .banner{
+    height: 100vh;
+    width: 100%;
+    padding: 100px 0px 0px 0px;
+}
+  .nombreBanner{
+    height: 60vh;
+  }
   .nombreBanner img{
-    margin-top: 240px;
+    width: 80%;
+    margin-top: 30vh;
+    align-items: center;
   }   
   .detalleBanner{
     height: auto;
     width: 100%;
-    flex-direction: column;
-    margin-top: 5px;
+    flex-direction: column;    
+    position: absolute;
+    top: 0;
+    margin-top: 70vh;
 }
 .detalleBanner div{
     margin-top: 15px;
@@ -1206,9 +1221,7 @@ footer p:last-child{
     height: 500px;
     width: 80vw;
 }.miscelaneasAgencia{
-    width: 100%;
-    justify-content: center;
-    gap: 60px;
+    display: none;
 
 }
 .serviciosDeAgencia p{
@@ -1246,6 +1259,23 @@ footer p:last-child{
     padding: 5px 0px 5px 0px;
 }
 
+/* NOSOTROS */
+
+.bannerNosotros img{
+    height: auto;
+    width: 80%;
+    padding-top: 20%;
+}
+.bannerNosotros p{
+    width: 90%;
+    font-size: 15px;
+    padding-top: 50px;
+}.cajasIntegrantes{
+    width: 50%;
+    margin-bottom: 20px;
+}.integrantesFotos img{
+    margin: auto;
+} 
 
 
 /* FOOTER */
