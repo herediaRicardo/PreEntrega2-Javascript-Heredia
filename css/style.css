@@ -40,7 +40,7 @@ body{
 
 .botonSubir:hover{
     filter: saturate(2);
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 .backgroundIndex{
@@ -60,6 +60,9 @@ header{
     z-index: 1;
     padding: 60px 30px 0px 30px;    
 } 
+.barraGrande{
+    padding-top: 20px;
+}
 
 
    /* Estilos para el menú hamburguesa */
@@ -119,7 +122,7 @@ header{
     transition-timing-function: ease-out;
     transition: 1.2s;
 }.nombreBanner img:hover{
-   scale: 1.5;
+    transform: scale(1.5);
 }
 .detalleBanner{
     height: auto;
@@ -152,9 +155,9 @@ header{
     transition: 0.1s;
 }
 
-.detalleBanner a:hover {
+.detalleBanner a:hover{
     filter: brightness(50);
-    scale: 0.95;
+    transform: scale(0.95);
 }
 
 .flexFlecha{    
@@ -235,7 +238,7 @@ header{
     border-radius: 10px;
 }.video iframe:hover{
     filter: brightness(1.2);
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 .miscelaneasAgencia{
@@ -294,7 +297,7 @@ position: relative;
     transition-timing-function: ease-in;
     transition: 0.5s;
 }.cajaPortfolio:hover{
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 .uno{
@@ -416,7 +419,10 @@ footer p:last-child{
 /* ---------------- PORTFOLIO ------------ */
 
 
-
+.carousel-control-next, .carousel-control-prev{
+    height: 100px;
+    align-self: center;
+}
 .carousel-inner{
     position: relative;
 }
@@ -502,7 +508,7 @@ padding-top: 1.25rem;
     transition: 0.5s;
 }.galeria img:hover{
     filter: saturate(1.5);
-    scale: 0.95;
+    transform: scale(0.95);
     object-fit: contain;
 }
 
@@ -510,13 +516,11 @@ padding-top: 1.25rem;
 
 
 /* ---------------- SERVICIOS ------------ */
-.servicios{
-    
+.servicios{    
     background-image: url(../assets/img/fondoNegro.jpg);
     height: auto;
     background-repeat: repeat;
     background-size: contain;
-
 }
 
 .fondoServicios{
@@ -570,7 +574,7 @@ padding-top: 1.25rem;
 }
 
 .brandingServicio h2{
-    font-size: 60px;
+    font-size: 3.75rem;
     text-align: center;    
     color: #E7328A;
     text-shadow: 5px 5px 0px #ffffff;
@@ -617,9 +621,9 @@ padding-top: 1.25rem;
     line-height: 90px;
     color: #fefefe;    
     text-shadow: 5px 5px 0px #E7328A;
-}.videosAnimados h2 span{   
+}
+.videosAnimados h2 span{   
     font-size: 70px;
-    line-height: 50px;
 }
 .videosAnimados p{
     font-size: 28px;
@@ -652,7 +656,6 @@ padding-top: 1.25rem;
     text-shadow: 5px 5px 0px #ffffff;
 }.creamosWeb h2 span{
     font-size: 145px;
-
 }
 .creamosWeb div p{
     width: 42vw;
@@ -666,12 +669,13 @@ padding-top: 1.25rem;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.578);
 }
 .creamosWeb .listaDetalle{
-    width: 35vw;
+    width: auto;
+    padding-left: 10px;
 }
 
 .formSection{
     height: auto;
-    padding: 120px 10px 90px 10px;
+    padding: 60px 10px 60px 10px;
     width: 100%;
     color: white;
     font-family: milker;
@@ -692,7 +696,8 @@ padding-top: 1.25rem;
     bottom: 0;
     left: 0;
     margin: 0px 0px 60px 60px;
-    background-image: url(../assets/img/misce-flecha.png);
+    background-image: url(../assets/img/misce-flecha.png);    
+    opacity: 0.5;
     height: 250px;
     width: 100px;
     background-repeat: no-repeat;
@@ -704,6 +709,7 @@ padding-top: 1.25rem;
     right: 0;
     margin: 60px 60px 0px 0px;
     background-image: url(../assets/img/misce-flecha.png);
+    opacity: 0.5;
     height: 250px;
     width: 100px;
     background-repeat: no-repeat;
@@ -813,21 +819,28 @@ padding-top: 1.25rem;
 }
 .cajasIntegrantes{
     height: auto;
-    width: 350px;
+    width: 25%;
     text-align: center;
     padding: 20px 10px 20px 10px;
 }
 .integrantes h4{
     font-size: 30px;
     text-align: right;
-    padding: 5px 0px 15px 0px;
+    padding: 15px 0px 15px 0px;
     border-bottom: 1px solid #E7328A;
     font-weight: lighter;
 }
+.integrantes h6{
+    font-size: 12px;
+    padding: 5px 0px 0px 0px;
+    text-align: left;
+    color: #66C5E1;
+}
 .integrantes p{
     font-size: 15px;
+    width: 95%;
     text-align: left;
-    padding: 15px 0px 15px 0px;
+    padding: 5px 0px 10px 0px;
     font-weight: lighter;
 }
 .integrantesFotos img{
@@ -838,7 +851,7 @@ padding-top: 1.25rem;
     transition: 0.5s;
 } 
 .integrantesFotos img:hover{
-    scale: 0.9;
+    transform: scale(0.9);
 }
 
 .cajaRedes{
@@ -848,11 +861,10 @@ padding-top: 1.25rem;
 }
 .cajaRedes a img:hover{
     filter: brightness(50);
-    scale: 0.9;
+    transform: scale(0.9);
 }
 
 .fondoNosotros{
-
     background-image: url(../assets/img/fondoNegro.jpg);
     position: relative;
     z-index: 0;
@@ -889,19 +901,19 @@ z-index: -1;
     background-size: cover;
     font-family: montserrat;
     text-align: center;
-    padding-top: 30vh;
+    padding-top: 24vh;
 }.contactanos h1{
     color: white;
     font-weight: lighter;
-    font-size: 80px;
+    font-size: 10vw;
     margin: 0px;
 }.contactanos h2{
-    font-size: 50px;
+    font-size: 6vw;
     color: gray;
     margin: 0rem;
 }.contactanos h3{
     color: white;
-    padding: 60px 0px 60px 0px;
+    padding: 60px 0px 30px 0px;
     font-size: 40px;
     font-weight: lighter;
 }.contactanos p{
@@ -916,7 +928,7 @@ z-index: -1;
 
 .ofrecemos{
     width: 100%;
-    padding: 100px 0px 100px 0px;
+    padding: 100px 100px 100px 0px;
     background-color: white;
     color: black;    
     font-family: montserrat;
@@ -926,7 +938,7 @@ z-index: -1;
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 200px;
+    margin-top: 160px;
     margin-right: 80px;
     height: 190px;
     width: 190px;
@@ -937,7 +949,7 @@ z-index: -1;
 
 .ofrecemos p{
     width: 70%;
-    font-size: 20px;
+    font-size: 1.5vw;
     margin: auto;
 }
 .queremos h4{
@@ -947,7 +959,7 @@ z-index: -1;
     margin: auto;
 }
 .queremos p{
-    font-size: 70px;
+    font-size: 4.5vw;
 }
 
 
@@ -1059,6 +1071,7 @@ footer p:last-child{
     text-align: center;
     list-style-position: inside;
     line-height: 40px;
+    
 }
 
 
@@ -1106,10 +1119,21 @@ footer p:last-child{
     text-align: center;
 }
 .creamosWeb .listaDetalle{
-    width: 100vw;
+    width: 100%;
     margin: auto;
 }
-
+.comienza p{
+    font-size: 25px;
+    width: 60%;
+    margin: auto;
+   }
+   .formSection::before{
+    text-align: right;
+    margin: 0px 0px 60px 20px;
+}.formSection::after{
+    margin: 60px 0px 0px 0px;
+} 
+   
 
 }
 
@@ -1124,16 +1148,36 @@ footer p:last-child{
     /* INDEX */
 
   header{
-    padding-top: 20px;
-  }  
-
-  .logo{
+    padding: 20px 5px 0px 10px;    
+    align-items: center;
+  } header h2{
+    color: white;
+    font-family: montserrat;
+    margin: 0;
     width: 80%;
+    text-align: left;    
+    padding-left: 5px;
+    font-weight: lighter;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  }
+  .logo{
+    width: 10%;
+}.logo img{
+    height: 40px;
+    padding-left: 10px;
+}.buscar{
+    width: 10%;
 }
 .barraGrande, .logoUno, .buscarUno{
     display: none;
   }
-
+  nav{
+    display: none;
+  }
+  .navBar{
+    gap: 40px;
+  }    
   .menuDesplegable {
     width: 100%;
     display: block;
@@ -1154,13 +1198,6 @@ footer p:last-child{
     text-align: right;
     border-radius: 5px;
   }
-
-  nav{
-    display: none;
-  }
-  .navBar{
-    gap: 40px;
-  }  
   
   .banner{
     height: 100vh;
@@ -1174,7 +1211,9 @@ footer p:last-child{
     width: 80%;
     margin-top: 30vh;
     align-items: center;
-  }   
+  } .nombreBanner img:hover{
+    transform: scale(1.2);
+}
   .detalleBanner{
     height: auto;
     width: 100%;
@@ -1238,7 +1277,6 @@ footer p:last-child{
 
 /* PORTFOLIO */
 
-
 .contenedorCajaDetalle{
     top: 85%;    
 }
@@ -1258,17 +1296,82 @@ footer p:last-child{
     gap: 10px;
     padding: 5px 0px 5px 0px;
 }
+.videosAnimados::after{
+    height: 250px;
+    width: 250px;
+}
+
+
+
+/* SERVICIOS*/
+
+.brandingServicio h2{
+    font-size: 6.5vw;
+}.brandingServicio span{
+    font-size: 14vw;
+    line-height: 12vw;
+}
+.brandingServicio div p{    
+    font-size: 28px;
+    width: 90%;
+    margin: auto;
+    padding: 10px 0px 20px 0px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.249);
+}
+.listaDetalle ul{
+    width: 90%;
+    font-size: 35px;
+    
+    padding: 0rem 0rem 0rem 0rem;
+}
+.listaDetalle ul li{
+    margin-top: 15px;
+}
+
+.videosAnimados h2{
+    font-size: 10vw;
+    text-align: center;
+    line-height: 10vw;
+    color: #fefefe;    
+    text-shadow: 5px 5px 0px #E7328A;
+}.videosAnimados h2 span{   
+    font-size: 10vw;
+    line-height: 10vw;
+}
+.creamosWeb h2{
+    font-size: 10vw;
+    line-height: 10vw;
+    text-align: center;
+    color: #E7328A;
+    text-shadow: 5px 5px 0px #ffffff;
+}
+.creamosWeb h2 span{
+    font-size: 14vw;
+}
+.comienza h3{
+    font-size: 10vw;
+}
+.creamosWeb div p{
+    width: 90%;
+    font-size: 28px; 
+    padding-top: 20px;
+}
+.creamosWeb .listaDetalle{
+    width: 100%;
+    margin: auto;
+}
+
 
 /* NOSOTROS */
 
 .bannerNosotros img{
     height: auto;
     width: 80%;
-    padding-top: 20%;
+    padding-top: 10vh;
 }
 .bannerNosotros p{
-    width: 90%;
-    font-size: 15px;
+    width: 80%;
+    font-size: 18px;
     padding-top: 50px;
 }.cajasIntegrantes{
     width: 50%;
@@ -1276,6 +1379,29 @@ footer p:last-child{
 }.integrantesFotos img{
     margin: auto;
 } 
+
+/* CONTACTO */
+
+.ofrecemos::after{
+  display: none;
+}
+.ofrecemos{
+    padding: 100px 20px 100px 20px;
+}
+.ofrecemos p{
+    width: 100%;
+    font-size: 3vw;
+    margin: auto;
+}
+.queremos h4{
+    width: 100%;
+    padding: 90px 0px 20px 0px;
+    font-size: 6vw;
+    margin: auto;
+}
+.queremos p{
+    font-size: 5vw;
+}
 
 
 /* FOOTER */
@@ -1313,8 +1439,6 @@ footer p:last-child{
     text-align: left;
     color: white;
 }
-
-
 }
 
 
@@ -1322,6 +1446,10 @@ footer p:last-child{
 
 @media only screen and (max-width: 400px){      
 /* Index */      
+header h2{
+    text-align: left;    
+    padding-left: 20px;    
+  }
 .nombreBanner{
 height: 400px;
 }
@@ -1350,22 +1478,111 @@ padding-bottom: 48px;
 font-size: 20px;
 }
 .cajaPortfolio:hover{
-scale: 1;
+    transform: scale(1.1);
 }
 .cajaNegra h4{    
 font-size: 8vw;
 }
 
+/* PORTFOLIO */
+
+
+.listaDetalle ul{
+    width: 100%;
+    margin: auto;
+    font-size: 25px;
+    text-align: center;
+    padding: 0rem 0rem 0rem 0rem;
+}
+.listaDetalle ul li{    
+    width: 100%;
+}
+.videosAnimados::after{
+    height: 40vw;
+    width: 40vw;    
+}
+.cajaFormulario{
+    padding: 0px 2px 0px 2px;
+}
+
+
+/* NOSOTROS */
+.bannerNosotros img{
+    padding-top: 15vh;
+}
+.bannerNosotros p{
+    font-size: 14px;
+    padding-top: 30px;
+}.cajasIntegrantes{
+    width: 50%;
+    margin-bottom: 20px;
+}
+.integrantes{
+    padding: 50px 0px 50px 0px;
+}
+.cajasIntegrantes{
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+}
+.integrantes h4{
+    text-align: right;
+    padding: 20px 0px 10px 0px;
+}
+.integrantes p{
+    font-size: 16px;
+    padding: 10px 0px 5px 0px;
+}
+
+
+/* CONTACTO */
+
+.contactanos{
+   align-content: center;
+   padding: 0px;
+   margin: 0px;
+}.contactanos h1{
+    font-size: 14vw;
+}.contactanos h2{
+    font-size: 10vw;
+}
+.contactanos h3{
+    color: white;
+    padding: 80px 0px 30px 0px;
+    font-size: 10vw;
+}
+.contactanos  a{
+    font-size: 6vw;
+    color: white;
+    text-decoration: none;
+}
+
+.ofrecemos{
+    padding: 100px 20px 100px 20px;
+}
+.ofrecemos p{
+    width: 100%;
+    font-size: 5vw;
+    margin: auto;
+}
+.queremos h4{
+    width: 100%;
+    padding: 90px 0px 20px 0px;
+    font-size: 9vw;
+    margin: auto;
+}
+.queremos p{
+    font-size: 8vw;
+}
+
+
+
+
 /* FOOTER */
 
 .infoFooter{
-gap: 0px;
-padding: 2px 10px 2px 10px;
 margin-top: 20px;
+display: none;
 }
-.infoFooter h5{
-font-size: 10px;
-}     
 .informacionFooter{
 justify-content: left;
 margin-left: 20px;
@@ -1381,5 +1598,11 @@ margin-left: 20px;
 
 .linea-vertical{
     border: 0px;
+}
+footer p:last-child{
+    width: 100%;
+    font-size: 20px;
+    margin: auto;
+    padding: 40px 0px 0px 0px;
 }
 }
