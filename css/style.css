@@ -824,7 +824,7 @@ padding-top: 1.25rem;
     padding: 20px 10px 20px 10px;
 }
 .integrantes h4{
-    font-size: 30px;
+    font-size: 2vw;
     text-align: right;
     padding: 15px 0px 15px 0px;
     border-bottom: 1px solid #E7328A;
@@ -1373,10 +1373,15 @@ footer p:last-child{
     width: 80%;
     font-size: 18px;
     padding-top: 50px;
-}.cajasIntegrantes{
+}
+.cajasIntegrantes h4{
+    font-size: 5vw;
+}
+.cajasIntegrantes{
     width: 50%;
     margin-bottom: 20px;
-}.integrantesFotos img{
+}
+.integrantesFotos img{
     margin: auto;
 } 
 
@@ -1525,7 +1530,7 @@ font-size: 8vw;
     padding: 20px 20px 20px 20px;
 }
 .integrantes h4{
-    text-align: right;
+    font-size: 8vw;
     padding: 20px 0px 10px 0px;
 }
 .integrantes p{
