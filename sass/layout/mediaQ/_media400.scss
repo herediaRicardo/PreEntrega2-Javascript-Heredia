@@ -1,0 +1,148 @@
+@media only screen and (max-width: 400px){    
+
+// INDEX
+header{
+    h2{
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+.banner{
+    .nombreBanner{
+        height: 400px;
+        img{
+            margin-top: 25vh;
+            height: auto;
+            width: 80%;
+            }
+        }
+        .detalleBanner{
+            margin-top: 65vh;
+            }
+}
+
+.agencia{
+    .flexSomosUna{
+        h1{
+            font-size: 14vw;
+            span{
+                font-size: 16vw;
+                }
+            }
+    }.flexAgencia .video iframe{
+        height: 600px;
+        }
+}
+.serviciosDeAgencia{
+    h2{
+        font-size: 12vw;
+        padding-bottom: 48px;
+    }p{
+        font-size: 20px;
+        }
+}
+
+.serviciosDeAgencia{
+    .cajaPortfolio:hover{
+        transform: scale(1.1);
+    }.cajaNegra h4{    
+        font-size: 8vw;
+        }
+        padding-bottom: 20px;
+}
+
+// SERVICIOS
+
+.listaDetalle{
+    ul{
+        width: 100%;
+        margin: auto;
+        font-size: 25px;
+        text-align: center;
+        padding: 0rem 0rem 0rem 0rem;
+        li{    
+            width: 100%;
+        }
+    }
+}
+.videosAnimados::after{
+    height: 40vw;
+    width: 40vw;    
+}
+.cajaFormulario{
+    padding: 0px 2px 0px 2px;
+}
+
+// NOSOTROS
+
+.bannerNosotros{
+    img{
+        padding-top: 12vh;
+    }p{
+        font-size: 4.5vw;
+        padding-top: 30px;
+    }
+}
+.integrantes{
+    padding: 50px 0px 50px 0px;
+    h4{
+        font-size: 8vw;
+        padding: 20px 0px 10px 0px;
+    }p{
+        font-size: 16px;
+        padding: 10px 0px 5px 0px;
+    }
+    .cajasIntegrantes{
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+    }
+}
+
+// CONTACTO
+.contactanos{
+    align-content: center;
+    padding: 0px;
+    margin: 0px;
+    h1{
+        font-size: 14vw;
+    }h2{
+        font-size: 10vw;
+    }h3{
+        color: white;
+        padding: 80px 0px 30px 0px;
+        font-size: 10vw;
+    }a{
+        font-size: 6vw;
+        color: white;
+        text-decoration: none;
+    }
+ }
+ .ofrecemos{
+    padding: 100px 20px 100px 20px;
+    p{
+        width: 100%;
+        font-size: 7vw;
+        margin: auto;
+    }
+}
+.queremos{
+    h4{
+        width: 100%;
+        padding: 90px 0px 20px 0px;
+        font-size: 9vw;
+        text-align: left;
+    }p{
+        font-size: 10vw;
+    }
+}
+.formSection{
+    .comienza{
+        h3{
+            font-size: 10vw;
+        }
+    }
+}
+
+
+}
