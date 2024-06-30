@@ -1,6 +1,10 @@
+@import "./utilities/variables";
+@import "./utilities/mixin";
+@import "./utilities/mapas";
+
+
 @import "./base/reset";
 @import "./base/typografias";
-
 
 
 
@@ -58,12 +62,12 @@ header{
             transition: 0.2s;
             text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
                 &:hover{
-                color: #E7328A;
+                color: $color-violeta;
                 
             }
         }
         .barra{
-            border-bottom: 1px solid #E7328A;
+            border-bottom: 1px solid $color-violeta;
         }       
     }    
 }
@@ -150,7 +154,7 @@ header{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        color: #66C5E1;
+        color: $color-celeste;
         align-items: center;
         padding-bottom: 50px;
         h1{
@@ -158,7 +162,7 @@ header{
             font-size: 8vh;
             text-shadow: 5px 5px 0px #212121;
             span{
-                color: #E7328A;
+                color: $color-violeta;
                 font-size: 12vw;
                 transition: 0.5s;
                 transition-timing-function: ease-in;
@@ -188,12 +192,12 @@ header{
                 line-height: 4vw;
                 text-shadow: 5px 5px 0px #212121;
                 span{
-                    color: #E7328A;
+                    color: $color-violeta;
                     font-size: 3.6vw;    
                     transition: 0.5s;
                     transition-timing-function: ease-in;   
                     &:hover{
-                        color: #66C5E1;
+                        color: $color-celeste;
                     } 
                 }
             }
@@ -315,7 +319,7 @@ header{
             flex-wrap: wrap;
             justify-content: space-around;    
             gap: 40px;
-            color: #66C5E1;
+            color: $color-celeste;
             margin: 0px 0px 10px 0px;
             padding: 40px 5px 40px 5px;
         }
@@ -327,7 +331,7 @@ header{
             padding: 40px 5px 20px 5px;    
             gap: 40px;
             h3{
-                color: #E7328A;
+                color: $color-violeta;
                 font-family: milker;
                 font-size: 30px;
                 position: relative;
@@ -340,7 +344,7 @@ header{
                     position: absolute;
                     height: 3px;
                     width: 90px;
-                    background-color: #E7328A;
+                    background-color: $color-violeta;
                     bottom: 20px;
                   }
             }
@@ -351,7 +355,7 @@ header{
                 transition-timing-function: ease-out;
                 transition: 0.1s;
                 &:hover{
-                    color: #66C5E1;
+                    color: $color-celeste;
                    }
                }
                .dataFooter{
@@ -534,7 +538,7 @@ header{
         h2{
             font-size: 3.75rem;
             text-align: center;    
-            color: #E7328A;
+            color: $color-violeta;
             text-shadow: 5px 5px 0px #ffffff;
         }span{
             font-size: 128px;
@@ -543,7 +547,7 @@ header{
             font-size: 28px;
             font-family: montserrat;
             margin-top: 20px;
-            color: #E7328A;
+            color: $color-violeta;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.578);
         }
     }
@@ -567,7 +571,7 @@ header{
             text-align: center;
             line-height: 90px;
             color: #fefefe;    
-            text-shadow: 5px 5px 0px #E7328A;
+            text-shadow: 5px 5px 0px $color-violeta;
             span{   
                 font-size: 70px;
             }
@@ -594,7 +598,7 @@ header{
             font-size: 100px;
             line-height: 100px;
             text-align: center;
-            color: #E7328A;
+            color: $color-violeta;
             text-shadow: 5px 5px 0px #ffffff;
             span{
                 font-size: 145px;
@@ -604,7 +608,7 @@ header{
             font-size: 28px;
             font-family: montserrat;
             margin-top: 20px;
-            color: #E7328A;
+            color: $color-violeta;
             text-align: left;  
             padding-top: 20px;
             margin-left: 20px;    
@@ -749,7 +753,7 @@ header{
        margin: auto;
        padding-top: 20px;
        span{
-        color: #E7328A;
+        color: $color-violeta;
         font-weight: bold;
     }
     }
@@ -779,13 +783,13 @@ header{
             font-size: 2vw;
             text-align: right;
             padding: 15px 0px 15px 0px;
-            border-bottom: 1px solid #E7328A;
+            border-bottom: 1px solid $color-violeta;
             font-weight: lighter;
         }h6{
             font-size: 12px;
             padding: 5px 0px 0px 0px;
             text-align: left;
-            color: #66C5E1;
+            color: $color-celeste;
         }p{
             font-size: 15px;
             width: 95%;
@@ -881,7 +885,6 @@ header{
         }
     }
 }
-
 
 
 
