@@ -49,10 +49,7 @@ header{
    /* Estilos para el menú hamburguesa */    
     
     .navBar{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 80px;
+        @include flex(flex,row,wrap,space-around,center,80px);
         list-style: none;
         a{
             font-size: 16px;    
@@ -99,11 +96,9 @@ header{
     .detalleBanner{
         height: auto;
         width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flex(flex,row,wrap,space-around,center,0px);
         font-family: montserrat;
-        color: gray;   
+        color: map-get($colores-oscuros, colorOscuro2);  
         margin-top: 20px;
         padding-bottom: 3rem;
         h2{
@@ -132,7 +127,7 @@ header{
             gap: 16px; 
             a{
                 text-decoration: none;
-                color: #8B8B8B;    
+                color: map-get($colores-oscuros, colorOscuro2);    
                 font-size: 20px;
             }
               
@@ -151,9 +146,7 @@ header{
     background-position: center;
     background-size: cover;
     .flexSomosUna{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        @include flex(flex,row,wrap,center,center,0px);
         color: $color-celeste;
         align-items: center;
         padding-bottom: 50px;
@@ -231,7 +224,7 @@ header{
     height: auto;
     width: 100%;
     padding: 80px 0px 200px 0px;
-    color: black;
+    color: map-get($colores-oscuros, colorOscuro1);  
     text-align: center;
     background-image: url(../assets/img/fondoBlanco.jpg);
     background-repeat: no-repeat;
@@ -250,13 +243,11 @@ header{
         font-size: 24px;
         margin: auto;
         margin-bottom: 100px;
-        text-shadow: 1px 1px 1px #4f4f4f;
+        text-shadow: 1px 1px 1px map-get($colores-oscuros, colorOscuro2);
     }
     .imagenesPortfolio{
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include flex(flex,row,wrap,center,center,0px);
         margin: auto;
         .cajaPortfolio{
             height: 350px;
@@ -315,21 +306,15 @@ header{
         background-image: url(../assets/img/fondoNegro.jpg);
         background-size: cover;
         .infoFooter{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;    
-            gap: 40px;
+            @include flex(flex,row,wrap,space-around,center,40px);
             color: $color-celeste;
             margin: 0px 0px 10px 0px;
             padding: 40px 5px 40px 5px;
         }
         .informacionFooter{
             color: white;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;    
+            @include flex(flex,row,wrap,space-around,center,40px);
             padding: 40px 5px 20px 5px;    
-            gap: 40px;
             h3{
                 color: $color-violeta;
                 font-family: milker;
@@ -419,17 +404,14 @@ header{
     color: black;
     padding-top: 1.25rem;
     .seccionesTrabajos{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        @include flex(flex,row,wrap,center,center,20px);
         padding: 30px 0px 30px 0px;
         list-style: none;           
                li{
                    a{
                     font-family: montserrat;
                     font-size: 1.25rem;    
-                    color: black;    
+                    color: map-get($colores-oscuros, colorOscuro1);      
                     text-decoration: none;
                     text-align: center;
                     transition-timing-function: ease-out;
@@ -443,7 +425,7 @@ header{
                 } 
             }.linea-vertical{
                 padding-right: 20px;
-                border-right: 1px solid black;
+                border-right: 1px solid map-get($colores-oscuros, colorOscuro1);  ;
             }
                        
     }
@@ -570,7 +552,7 @@ header{
             font-size: 100px;
             text-align: center;
             line-height: 90px;
-            color: #fefefe;    
+            color: white;    
             text-shadow: 5px 5px 0px $color-violeta;
             span{   
                 font-size: 70px;
@@ -771,9 +753,7 @@ header{
     color: white;
     font-family: montserrat;
     padding: 120px 0px 120px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flex(flex,row,wrap,space-around,center,0px);
     .cajasIntegrantes{
         height: auto;
         width: 25%;
@@ -836,7 +816,7 @@ header{
         margin: 0px;
     }h2{
         font-size: 6vw;
-        color: gray;
+        color: map-get($colores-oscuros, colorOscuro2);  ;
         margin: 0rem;
     }h3{
         color: white;

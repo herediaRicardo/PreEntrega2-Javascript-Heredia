@@ -54,6 +54,8 @@ header {
     /* Estilos para el menú hamburguesa */ }
     header .barraGrande .navBar {
       display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
       gap: 80px;
@@ -93,8 +95,11 @@ header {
   height: auto;
   width: 100%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  gap: 0px;
   font-family: montserrat;
   color: gray;
   margin-top: 20px;
@@ -120,7 +125,7 @@ header {
     gap: 16px; }
     .banner .detalleBanner .flexFlecha a {
       text-decoration: none;
-      color: #8B8B8B;
+      color: gray;
       font-size: 20px; }
 
 .agencia {
@@ -135,8 +140,11 @@ header {
   background-size: cover; }
   .agencia .flexSomosUna {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
     color: #66C5E1;
     align-items: center;
     padding-bottom: 50px; }
@@ -218,12 +226,15 @@ header {
     font-size: 24px;
     margin: auto;
     margin-bottom: 100px;
-    text-shadow: 1px 1px 1px #4f4f4f; }
+    text-shadow: 1px 1px 1px gray; }
   .serviciosDeAgencia .imagenesPortfolio {
     width: 100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 0px;
     margin: auto; }
     .serviciosDeAgencia .imagenesPortfolio .cajaPortfolio {
       height: 350px;
@@ -271,8 +282,10 @@ footer {
   background-size: cover; }
   footer .infoFooter {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     gap: 40px;
     color: #66C5E1;
     margin: 0px 0px 10px 0px;
@@ -280,10 +293,12 @@ footer {
   footer .informacionFooter {
     color: white;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 40px 5px 20px 5px;
-    gap: 40px; }
+    align-items: center;
+    gap: 40px;
+    padding: 40px 5px 20px 5px; }
     footer .informacionFooter h3 {
       color: #E7328A;
       font-family: milker;
@@ -355,8 +370,10 @@ footer {
   padding-top: 1.25rem; }
   .trabajos .seccionesTrabajos {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     padding: 30px 0px 30px 0px;
     list-style: none; }
@@ -480,7 +497,7 @@ footer {
       font-size: 100px;
       text-align: center;
       line-height: 90px;
-      color: #fefefe;
+      color: white;
       text-shadow: 5px 5px 0px #E7328A; }
       .servicios .videosAnimados h2 span {
         font-size: 70px; }
@@ -657,8 +674,11 @@ footer {
   font-family: montserrat;
   padding: 120px 0px 120px 0px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: center;
+  gap: 0px; }
   .integrantes .cajasIntegrantes {
     height: auto;
     width: 25%;
