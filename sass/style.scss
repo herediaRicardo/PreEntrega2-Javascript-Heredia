@@ -22,7 +22,7 @@
     }
 }
 .backgroundIndex{
-    background-image: url(../assets/img/fondoBLack-Violet.png);
+    background-image: url(../assets/img/fondoBLack-Violet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -76,7 +76,7 @@ header{
 .banner{
     .nombreBanner{
         text-align: center;
-        background-image: url(../assets/img/noiserGris.png);
+        background-image: url(../assets/img/noiserGris.webp);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -141,7 +141,7 @@ header{
     color: white;
     font-family: milker;
     padding: 40px 0px 90px 0px;
-    background-image: url(../assets/img/fondoBlack-white.png);
+    background-image: url(../assets/img/fondoBlack-white.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -266,17 +266,17 @@ header{
             background-size: cover;
         }
         .dos{
-            background-image: url(../assets/img/TresD.png);
+            background-image: url(../assets/img/tresD.webp);
             align-content: center;
             background-size: cover;
         }
         .tres{
-            background-image: url(../assets/img/branding.png);
+            background-image: url(../assets/img/branding.webp);
             align-content: center;
             background-size: cover;
         }
         .cuatro{
-            background-image: url(../assets/img/audiovisual.png);
+            background-image: url(../assets/img/audiovisual.webp);
             align-content: center;
             background-size: cover;
         }
@@ -303,7 +303,7 @@ header{
         height: auto;
         width: 100%;
         font-family: montserrat;
-        background-image: url(../assets/img/fondoNegro.jpg);
+        background-image: url(../assets/img/fondoFooter.jpg);
         background-size: cover;
         .infoFooter{
             @include flex(flex,row,wrap,space-around,center,40px);
@@ -459,7 +459,7 @@ header{
 // SERVICIOS
 
 .servicios{    
-    background-image: url(../assets/img/fondoNegro.jpg);
+    background-image: url(../assets/img/fondoNegro.webp);
     height: auto;
     background-repeat: repeat;
     background-size: contain;
@@ -695,7 +695,7 @@ header{
 
 
 .fondoNosotros{
-    background-image: url(../assets/img/fondoNegro.jpg);
+    background-image: url(../assets/img/fondoNegro.webp);
     position: relative;
     z-index: 0;
     &::before{
@@ -718,7 +718,7 @@ header{
     width: 100%;
     margin: auto;
     text-align: center;
-    background-image: url(../assets/img/misceCubo.png);
+    background-image: url(../assets/img/misceCubo.webp);
     /* background-size:  56.25rem; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -752,10 +752,10 @@ header{
     width: 100%;
     color: white;
     font-family: montserrat;
-    padding: 120px 0px 120px 0px;
+    padding: 120px 0px 160px 0px;
     @include flex(flex,row,wrap,space-around,center,0px);
     .cajasIntegrantes{
-        height: auto;
+        height: 100vh;
         width: 25%;
         text-align: center;
         padding: 20px 10px 20px 10px;
@@ -772,9 +772,10 @@ header{
             color: $color-celeste;
         }p{
             font-size: 15px;
+            height: auto;
             width: 95%;
             text-align: left;
-            padding: 5px 0px 10px 0px;
+            padding: 5px 0px 5x 0px;
             font-weight: lighter;
         }.integrantesFotos img{
             height: auto;
@@ -787,6 +788,7 @@ header{
             }
         }.cajaRedes{
             text-align: right;
+            margin-right: 20px;
             transition-timing-function: ease-out;
             transition: 0.5s;
             a img:hover{
